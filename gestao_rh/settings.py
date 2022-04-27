@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from telnetlib import LOGOUT
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,5 +97,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
